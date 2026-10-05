@@ -12,10 +12,27 @@ exhibits = [
 ]
 
 # 1. Print each exhibit on its own line, numbered starting at 1:   1. The Art of Everyday Life
+count=1
+for exhibit in exhibits: 
+    print(f'{count}. {exhibit}')
+    count= count +1
 
 # 2. Print a blank line, then each exhibit in ALL CAPS followed by its length:   PAPER CUTS 10
+print()
+i=1
+for ex in exhibits: 
+    print(ex.upper(), len(ex))
+
 
 # 3. Print a blank line, then how many exhibit names contain the word "the" (any case):   With "the": 3
+print()
+m=0
+for exh in exhibits:
+    exh_lc= exh.lower()
+    if "the" in exh_lc:
+        m= m+1
+print('With "the":' , m)
+
 
 # BONUS (optional): Python has a built-in function, enumerate(), that numbers items for you.
 # Rewrite your code for #1 so it uses enumerate() instead of adding 1 each time.

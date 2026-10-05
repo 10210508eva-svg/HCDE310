@@ -47,11 +47,13 @@ We changed the font style and color and removed some small parts that weren't ne
 ### 7. Explain back
 
 Pick one part of the code. In your own words, what does it do?
+,,,
 <helmet>
   <link rel="stylesheet" href="_ds/broadsheet-9f7df910-3a02-41d0-9056-c87372662e8b/styles.css">
   <script src="_ds/broadsheet-9f7df910-3a02-41d0-9056-c87372662e8b/_ds_bundle.js"></script>
   <style>:root{--color-bg:oklch(0.32 0.11 22);--color-text:oklch(0.95 0.03 85);--color-accent:oklch(0.42 0.08 145);--color-accent-600:oklch(0.36 0.08 145);--color-accent-700:oklch(0.85 0.1 88);--color-accent-900:oklch(0.25 0.05 145);--color-accent-100:oklch(0.9 0.04 145);--color-accent-2:oklch(0.5 0.14 30);--color-neutral-700:oklch(0.85 0.04 70)} body{margin:0;background:var(--color-bg)} a{color:var(--color-accent-700)} a:hover{color:var(--color-accent-900)} @keyframes loopL{from{transform:translateX(0)}to{transform:translateX(-50%)}} @keyframes loopR{from{transform:translateX(-50%)}to{transform:translateX(0)}}</style>
 </helmet>
+'''
 
 This part is about the styling for the whole website. I asked AI to explain what the code means. It said that Helmet is a templating tool that lets a component add elements to the page. The link and script pull in the design system for this website. The style block overrides the colors, which helps us customize the look and overall style. Oklch is a CSS color format that uses three numbers to define a color.
 
