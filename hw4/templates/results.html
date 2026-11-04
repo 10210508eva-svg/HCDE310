@@ -1,0 +1,39 @@
+<!-- use the code from inclass 10 -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Results for {{ term }}</title>
+</head>
+<body>
+  <!-- "Result for ___" from my sketch -->
+  <h1>Results for "{{ term }}"</h1>
+  <a href="/">New search</a>
+
+  <!-- count_by_artist from HW3, now on the page instead of print() -->
+  <h2>Artists in these results</h2>
+  <ul>
+  {% for artist, count in counts.items() %}
+    <li>{{ artist }}: {{ count }}</li>
+  {% endfor %}
+  </ul>
+
+  <h2>Artworks</h2>
+  <ul>
+  {% for art in artworks %}
+    <li>
+      <!-- h3 for each title so screen reader users can jump artwork to artwork -->
+      <h3>{{ art.title }}</h3>
+      <!-- the same 6 fields from my sketch and my HW3 loop -->
+      <p>Artist: {{ art.artist }}</p>
+      <p>Year: {{ art.year }}</p>
+      <p>Location: {{ art.location }}</p>
+      <p>Department: {{ art.department }}</p>
+      <p>Type: {{ art.type }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+
+  <a href="/">New search</a>
+</body>
+</html>

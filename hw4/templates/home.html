@@ -1,0 +1,27 @@
+<!-- use the code from inclass 10 -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Find Artworks</title>
+</head>
+<body>
+  <!-- "Find Artworks" title from my sketch -->
+  <h1>Find Artworks</h1>
+
+  <!-- shows the message from /results when something goes wrong
+       (empty search, no results, or API error) -->
+  {% if message %}
+    <p>{{ message }}</p>
+  {% endif %}
+
+  <form action="/results" method="get">
+    <!-- the label tells screen readers what the box is for,
+         and clicking it puts the cursor in the box -->
+    <label for="term">Search for artworks</label>
+    <!-- name="term" has to match request.args.get("term") in app.py -->
+    <input id="term" name="term">
+    <button type="submit">Search</button>
+  </form>
+</body>
+</html>
