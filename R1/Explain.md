@@ -7,7 +7,13 @@ Why designer care?
 Designers might think this is a useful tool when they are creating a book search website or digital library. This API means designers don't need to enter book information manually and can focus more on design.
 
 How to use it?
-1. Find parameters: At this link, https://openlibrary.org/dev/docs/api/search, there is a Fields tab, and you can see a lot of data on GitHub. I think these are all the parameters you can use: https://github.com/internetarchive/openlibrary/blob/b4afa14b0981ae1785c26c71908af99b879fa975/openlibrary/plugins/worksearch/schemes/works.py#L38-L91
+1. 
+Open the terminal and install requests:
+python3 -m pip install requests
+
+Create a Python file called books.py
+
+Find parameters: At this link, https://openlibrary.org/dev/docs/api/search, there is a Fields tab, and you can see a lot of data on GitHub. I think these are all the parameters you can use: https://github.com/internetarchive/openlibrary/blob/b4afa14b0981ae1785c26c71908af99b879fa975/openlibrary/plugins/worksearch/schemes/works.py#L38-L91
 
 API end point is https://openlibrary.org/search.json
 
