@@ -39,3 +39,19 @@ print('With "the":' , m)
 # Your output should stay exactly the same, so check.py still passes.
 # Look it up: https://docs.python.org/3/library/functions.html#enumerate
 # (Hint: it starts counting at 0 unless you tell it otherwise.)
+term = input("Search for: ")
+print("You searched for:", term)
+print(type(term))
+
+import os
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+key = os.getenv("NASA_API_KEY")
+
+url= "https://api.nasa.gov/EPIC/api/natural"
+
+params = {"api_key": key}
+response = requests.get(url, params=params, timeout=10)
+print(response.status_code)

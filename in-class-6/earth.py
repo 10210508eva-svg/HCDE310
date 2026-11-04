@@ -17,6 +17,16 @@ url = "https://api.nasa.gov/EPIC/api/natural"
 
 
 
-response = requests.get(url,apikey, timeout=10)
+response = requests.get(url,params={"api_key": apikey}, timeout=10)
 
 print(response)
+
+def newest_photo(photos):
+    """Takes a list of photos and returns the one with the latest date."""
+    newest = photos[0]
+    for photo in photos:
+        if photo["date"] > newest["date"]:
+            newest = photo
+    return newest  
+
+print("Newest photo:", newest_photo(response.json())["date"])

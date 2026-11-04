@@ -1,0 +1,1 @@
+We use a large title and a search bar on the home page to make it clear and easy for users to understand. The results page displays all the artworks found. Above the artwork information, we show the artwork count for each artist. This gives users a quick summary of the search results before they explore the individual artworks in more detail.
